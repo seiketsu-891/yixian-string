@@ -1,0 +1,57 @@
+html
+  font-size: 62.5%
+  color: var(--color-grey-main)
+a
+  text-decoration: none
+  color: inherit
+  outline: none
+  &:hover
+    text-decoration: none
+    color: inherit
+html
+  box-sizing: border-box
+  -webkit-overflow-scrolling: touch
+  scroll-behavior: smooth
+
+body
+  background: #E9EDF3
+
+*, *:before, *:after
+  box-sizing: inherit
+
+input
+  // -webkit-autofill: none
+  //-- 去除firefox密码框的黄色---
+  filter: none !important
+  &:focus
+    outline: none
+  &::placeholder
+    font-size: 14px
+
+input[type="button"]
+  border: none
+  cursor: pointer
+
+
+input[type="checkbox"]
+  cursor: pointer
+
+// 去除可编辑区域的蓝色框（todo 这两个上面那个是否可以去掉）
+span[contenteditable="true"]
+  outline: none
+
+
+// 设置按钮被禁用后的鼠标样式
+button:disabled
+  cursor: auto
+
+[contenteditable]:focus
+    outline: 0px solid transparent
+
+textarea, input, button, select
+ font-family: inherit
+ font-size: inherit
+
+//去除firefox表单提交失败后的input红框
+input:invalid
+    box-shadow: none

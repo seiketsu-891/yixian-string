@@ -1,0 +1,154 @@
+// ----form layout and base style -----------
+.form
+  &__errors
+    display: block
+    height: 1.6rem
+    line-height: 1.6rem
+    font-size: 1.3rem
+    color: #EF754B
+  &__content
+    padding: 30px
+    padding-top: 10px
+    padding-bottom: 0
+    text-align: left
+    // width: min-content
+  &__title
+    padding-left: 1.2rem
+    font-size: 2rem
+    position: relative
+    display: block
+    border-left: 4px solid var(--color-black)
+    height: 2.5rem
+    line-height: 2.5rem
+  &__input
+    background: transparent
+  &__input-container
+    // margin-top: .6rem
+    position: relative
+    width: 240px
+    height: min-content
+    &:first-of-type
+      margin-top: 2rem
+    &:last-of-type
+      margin-bottom: 4rem
+
+// -------- input item----------
+
+.input-item
+  padding: 0 5px !important
+  display: inline-block
+  position: relative
+  font-size: var(--fontsize-normal)
+  color: var(--color-grey-main)
+  &--border-bottom
+    border: 0
+    border-bottom: 1px solid var(--color-grey-light-1)
+    width: 100%
+  &:focus~ .anim-border-bottom
+    background: var(--color-black)
+    width: 100%
+    transition: width .3s ease-in
+
+// -------- select items---------------
+.select
+  outline: none
+  font-size: var(-size-text-normal)
+  padding-left: 10px
+  @include vendor-prefix($prop: appearance, $value: none)
+  &-option
+    box-sizing: content-box
+    padding: 100px
+.select--grey-main
+  color: var(--color-grey-main)
+.select--lightgrey
+  color: #BEBEBE !important
+
+// -------- checkbox item----------
+
+.checkbox-item
+  padding: 0
+  width: 1.8rem
+  height: 1.8rem
+  vertical-align: middle
+  position: relative
+  visibility: hidden
+  -webkit-appearance: none
+  appearance: none
+
+  &::before, &::after
+    visibility: visible
+    display: inline-block
+    position: absolute
+    width: 1.8rem
+    height: 1.8rem
+    font-size: 18px
+    content: ''
+  &::before
+    left: 0
+    top: 0
+    box-sizing: border-box
+    background-color: #fff
+    border-radius: 3px
+    @include bordered($radius: null)
+  &:checked
+    // visibility: hidden
+    &::after,&::before
+      visibility: visible
+    &::after
+      left: 0
+      top: -1px
+      font-family: "iconfont"
+      content: "\e64b"
+      font-size: 18px
+      color: var(--color-grey-main)
+  &__label
+    padding-left: 6px
+    display: inline-block
+    vertical-align: middle
+    line-height: 18px
+    height: 18px
+  &--grey
+    &::before
+      border-radius: 50% !important
+      border: 1px solid #ADADAD !important
+    &::after
+      font-size: 12px !important
+      top: 3px !important
+      left: 3px !important
+      color: #ADADAD !important
+    &:checked
+      &::before
+        background: #E4E9ED !important
+        border: 1px solid #E4E9ED !important
+      &::after
+        color: #ABAEB1 !important
+
+// -------- search bar----------
+.search-bar
+  display: flex
+  align-items: center
+  position: relative
+  &__input
+    color: inherit
+    padding: 0 2.5rem 0 4rem
+    width: 100%
+    height: 3.5rem
+    @include bordered($color: var(--color-grey-light-1), $radius:null)
+    &::placeholder
+      color: var(--color-grey-light-1)
+.icon-search
+  margin-left: 1.5rem
+
+// -----  select --------
+.select--elementui
+  -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+  padding: 0 15px
+  border: 1px solid #E0E3EC
+  outline: none
+  height: 4.2rem
+  color: #606266
+  font-size: inherit
+  &:hover
+    border: 1px solid #BFC4CD

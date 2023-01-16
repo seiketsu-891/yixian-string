@@ -1,0 +1,67 @@
+body
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,PingFang TC,Hiragino Sans GB,Microsoft JhengHei,sans-serif !important
+  font-variant: tabular-nums
+  font-feature-settings: 'tnum'
+  line-height: 1.5
+html
+  // 修复chrome(偏粗)和firefox(偏细)黑体效果不同的问题
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-text-size-adjust: 100%
+h1
+  font-size: 4.3rem
+  font-weight: normal
+  letter-spacing: 1.6rem
+h2
+  font-size: 2.3rem
+
+em
+  display: inline-block
+  position: relative
+  &::before
+    position: absolute
+    content: ''
+    height: 3px
+    width: 100%
+    left: 0
+    bottom: -3px
+    background: #F3CB48
+    border-radius: 2px
+
+body
+  font-size: 1.4rem
+
+$breakpoint-sm: 576px
+$breakpoint-md: 768px
+$breakpoint-lg: 992px
+$breakpoint-xl: 1200px
+
+::-moz-selection
+  color: red
+  background: yellow
+::selection
+  color: #fff
+  background: #39CCCC
+
+
+@media(min-width: $breakpoint-lg)
+  body
+    font-size: 1.5rem
+  //  ----------text-------
+.text--normal
+  font-size: 15px
+.text--large
+  font-size: 200px
+.text--white
+  color: #fff
+.text--black
+  color: #5D5D5D
+.text--small
+  font-size: 1.4rem
+.text--small-2
+  font-size: 1.3rem
+
+.text--grey-main
+  color: var(--color-grey-main)
+.text--grey-moderate-1
+  color: var(--color-grey-moderate-1)

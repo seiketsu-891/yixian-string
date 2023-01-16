@@ -1,0 +1,153 @@
+GET http://localhost:8080/hello
+Accept: application/json
+###
+
+POST  http://localhost:8080/hello/post
+Content-Type: application/x-www-form-urlencoded
+
+name=Alex
+
+###
+
+GET http://localhost:8080/list?username=mickytest
+Accept: application/json
+###
+
+POST http://localhost:8081/api/v1/account/sms/send
+Content-Type: application/json
+
+{
+  "mobile":15953035954,
+  "forWhat":"R"
+}
+
+###
+
+POST http://localhost:8081/api/v1/account/register
+Content-Type: application/json
+
+{
+  "phoneNumber": 13497493333,
+  "timezone": "Asia/Shanghai",
+  "password": "124reeee",
+  "code": "234"
+}
+
+###
+POST http://localhost:8081/api/v1/user/
+Content-Type: application/json
+
+###
+GET http://localhost:8080/api/v1/user/todos/list?userId=0c03f651-5b53-4424-b67c-b4dd8502edb2&date=2021-02-21
+Accept: application/json
+
+###
+
+POST http://localhost:8081/api/v1/user/todos/add
+Content-Type: application/json
+
+{
+  "userId": "0c03f651-5b53-4424-b67c-b4dd8502edb2",
+  "priority": "31",
+  "date": "2023-02-14t",
+  "description":""
+}
+
+###
+POST http://localhost:8081/api/v1/user/todos/del
+Content-Type: application/json
+
+{
+"userId": "0c03fg651-5b53-4424-b67c-b4dd8502edb2",
+"id":"900a0292-9eba-4559-b9a4-d06e281f0c3c"
+}
+###
+
+POST http://localhost:8081/api/v1/user/todos/done
+Content-Type: application/json
+
+{
+"userId": "0c03f651-5b53-4424-b67c-b4dd8502edb2",
+"id":"9a8a24d6-6b94-408g4-98fa-220ae0021308"
+}
+
+###
+POST http://localhost:8081/api/v1/user/todos/edit
+Content-Type: application/json
+
+{
+"userId": "0c03f651-5b53-4424-b67c-b4dd8502edb2",
+"id":"8fd50806-6d5b-46ac-b577-20782ef3b320",
+"description": "alex is my best friend"
+}
+
+###
+GET http://localhost:8080/api/v1/user/notification/list?userId=32355422-c0d4-4aa8-8f9e-68001a29fd4a
+Accept: application/json
+
+###
+POST http://localhost:8081/api/v1/user/notification/read
+Content-Type: application/json
+
+{
+  "id":"6005905a-c81c-435d-a136-e21b7b7861eb",
+"userId": "f7061321-902e-499e-9b19-d02d774e10d1"
+}
+
+###
+POST http://localhost:8081/api/v1/user/notification/del
+Content-Type: application/json
+
+{
+"id":"6005905a-c81c-435d-a136-e21b7b7861eb",
+"userId": "f7061321-902e-499e-9b19-d02d774e10d1"
+}
+
+
+###
+GET http://localhost:8081/api/v1/user/notification/del
+Content-Type: application/json
+
+{
+  "id":"6005905a-c81c-435d-a136-e21b7b7861eb",
+  "userId": "f7061321-902e-499e-9b19-d02d774e10d1"
+}
+
+###
+GET http://localhost:8080/api/v1/user/notification/check?userId=f7061321-902e-499e-9b19-d02d774e10d1
+Accept: application/json
+###
+POST  http://localhost:8081/api/v1/user/notification/delall
+Content-Type: application/json
+
+{
+  "userId": "32355422-c0d4-4aa8-8f9e-68001a29fd4a"
+}
+
+
+###
+DELETE http://127.0.0.1:8081/api/v1/user/todos/del/df409607-9f77-4443-87b2-e94fc3f79193?id=1291031d-b487-4b8c-a9b1-f9e1ea04a7cd
+Content-Type: application/json
+
+{
+  "id": "32355422-c0d4-4aa8-8f9e-68001a29fd4a"
+}
+
+###
+POST http://127.0.0.1:8081/api/v1/user/entrycat/add/df409607-9f77-4443-87b2-e94fc3f79193
+Content-Type: application/json
+
+{
+  "color": "#A4A4A4",
+  "name": "zehshi"
+}
+
+###
+GET http://127.0.0.1:8081/api/v1/user/timeentry/list/df409607-9f77-4443-87b2-e94fc3f79193?start=2022-11-13&end=2022-11-19&tz=Asia/Shanghai&all=0
+
+
+###
+GET http://127.0.0.1:8081/api/v1/user/timeentry/durs/df409607-9f77-4443-87b2-e94fc3f79193
+
+###
+POST http://127.0.0.1:8081/api/v1/user/grid-diary/add/df409607-9f77-4443-87b2-e94fc3f79193?date=2022-11-19

@@ -1,0 +1,43 @@
+.navbar
+  &__container
+    user-select: none
+    background: #fff
+    height: 100vh
+    box-shadow: 0 30px 60px rgba(113, 168, 188, .16)
+  &__logocontainer
+    width: 100%
+    min-height: 12rem
+    height: 18%
+    display: flex
+    align-items: center
+    justify-content: center
+  &__menu
+    width: 100%
+    text-align: center
+  &__menuitem
+    > .router-link-active,.router-link-exact-active
+        color: #414141 !important
+        background: #FFE0B7 !important
+        box-shadow: 10px 20px 30px rgba(239, 130, 130, .16)
+        border-top-right-radius: 26px
+        border-bottom-right-radius: 26px
+        background-size: 80% 100%
+        margin-right: 30px
+    &:not(:last-of-type)
+      margin-bottom: 6px
+    &-link
+      transition: all .2s
+      padding: 2rem 0
+      &:link,&:visited
+        display: block
+        color: #93999F
+      &:hover
+        color: #414141
+      &:active
+        color: #414141
+    &-icon
+      display: inline-block
+      margin-right: 1.2rem
+    &-name
+      display: inline-block
+      color: currentColor

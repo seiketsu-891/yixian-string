@@ -1,0 +1,223 @@
+/*  ====== input ======  */
+
+
+/* 调整input高度和radius值  */
+
+.el-input__inner {
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border-radius: 6px;
+    border: 1px solid #e0e3ec;
+}
+
+
+/* 去除蓝色框 */
+
+.el-input__inner:focus {
+    border: 1px solid #e0e3ec;
+}
+
+
+/* 改变占位符颜色 */
+
+.el-input__inner::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ADADAD;
+    opacity: 1;
+    /* Firefox */
+}
+
+.el-input__inner:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #ADADAD;
+}
+
+.el-input__inner::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #ADADAD;
+}
+
+
+/* 改变label的margin和align等 */
+
+.el-form-item__label {
+    color: inherit;
+    margin: 0 !important;
+    text-align: left;
+    width: max-content !important;
+    padding: 0 !important;
+}
+
+
+/* 改变布局为纵向 */
+
+.el-form-item {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+
+/* 改变label字体大小和高度 */
+
+.el-form-item__label {
+    font-size: 1.4rem;
+    line-height: normal;
+}
+
+
+/* 去除输入框原本的margin */
+
+.el-form-item__content {
+    margin-top: .6rem;
+    border-radius: 0;
+    margin-left: 0 !important;
+}
+
+
+/* 去除border-radius， 调整高度 */
+
+.el-input__inner {
+    border-radius: 0 !important;
+    height: 4.2rem;
+}
+
+
+/* 去除禁止的鼠标样式 */
+
+.el-input.is-disabled .el-input__inner {
+    cursor: default;
+}
+
+
+/* =====  select ======== */
+
+
+/*避免项目过长失去响应式*/
+
+.el-select-dropdown__item {
+    max-width: 40vw;
+}
+
+
+/* 改变外框颜色 */
+
+.el-select .el-input.is-focus .el-input__inner {
+    border-color: #F7CB38;
+}
+
+
+/* 去除原本双击后外边会出现的蓝色框 */
+
+.el-radio-button {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 去除ios上点击后的蓝色边框*/
+
+.el-radio-button is-active is-focus{
+  box-shadow: none !important
+}
+
+
+/* ===== radio button ======  */
+
+
+/* 改变radio button的颜色 */
+
+.el-radio-button__orig-radio:checked+.el-radio-button__inner {
+    background-color: #FDF6EE !important;
+    border-color: #F6DCB2 !important;
+    color: #E8A23E !important;
+    box-shadow: none !important;
+    ;
+    outline: none !important;
+    ;
+}
+
+
+/* 去除hover时候字颜色的变化 */
+
+.el-radio-button__inner:hover {
+    color: inherit;
+}
+
+
+
+/* 去除select的蓝色边框 */
+
+.el-select .el-input.is-focus .el-input__inner {
+    border-color: #E0E3EC;
+}
+
+.el-select .el-input__inner:focus {
+    border-color: #E0E3EC;
+}
+
+
+/* 去除被选中项的蓝色 */
+
+.el-select-dropdown__item.selected {
+    color: inherit;
+}
+
+
+/* ==== color picker ====  */
+
+
+/* 去除color picker的向下箭头 */
+
+.el-color-picker__icon {
+    display: none;
+}
+
+
+/* ==== dropdown ====  */
+
+.el-dropdown-link {
+    cursor: pointer;
+}
+
+
+/* 去掉菜单上面的箭头 */
+
+.el-popper__arrow {
+    visibility: hidden;
+}
+
+
+/* boxshadow效果 和padding调整 */
+
+.el-dropdown-menu {
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 1px 3px 5px #dfe8ed;
+    outline: none;
+    user-select: none;
+}
+
+.el-dropdown-menu::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.el-dropdown__popper.el-popper[role=tooltip] {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0px;
+}
+
+.el-popper.is-light {
+    border: none;
+}
+
+
+/* ==== el-loading===== */
+
+.el-loading-spinner .path {
+    stroke: #F3CB48
+}

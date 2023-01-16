@@ -1,0 +1,26 @@
+.footer
+  color: #95AFBC
+  margin-top: calc(var(--margin-section) * 3) !important
+  height: auto
+  margin-bottom: 0
+  &__content
+    font-size: 15px
+    width: 100%
+    max-width: 1140px
+    margin: 0 auto
+    &-itemwrapper
+      padding : 2rem
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      > li
+        &:not(:last-of-type)
+          margin-bottom: 2em
+
+  &__fullwidthbox
+    padding: 2rem  calc(5% + 15px)
+    width: 100vw
+    height: max-content
+    background: #F2F5FA
+    margin-left: calc((100% - 100vw)/2)

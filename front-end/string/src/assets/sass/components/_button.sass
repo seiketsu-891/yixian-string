@@ -1,0 +1,126 @@
+.button
+  text-align: center
+  display: inline-block
+  &:hover
+    cursor: pointer
+
+  &--large
+    width: 190px
+    height: 45px
+    line-height: 45px
+
+  &--outline-black
+    background: white
+    color: var(--color-black)
+    outline: 1px solid var(--color-black)
+    outline-offset: -1px
+
+.button--hover-black
+  color:  #767676
+  &:hover
+    color: var(--color-black)
+.button--movingline
+  color: white
+  background: var(--color-black)
+  position: relative
+  backface-visibility: hidden
+  transition: all .4s ease-in
+  &::before,&::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    height: 2px
+    width: 0
+    background: var(--color-black)
+    transition: all .4s
+  &::after
+    top: inherit
+    left: 0
+    bottom: 0
+  &:hover
+    background: white
+    color: var(--color-black)
+    &::before, &::after
+      width: 100%
+      transition: all .8s ease-in
+
+
+.btn
+  color: inherit
+  font-size: inherit
+  background: none
+  outline: none
+  border: 0
+  cursor: pointer
+  min-width: max-content
+  height: max-content
+  &--normal
+    line-height: 38px
+    height: 38px
+    width: 85px
+  &--black
+    color: white
+    background: var(--color-black)
+    border-radius: 19px
+  &--confirm
+    color: #5D5D5D
+    border-radius: 12px
+    padding: 6px 25px
+    background-color: #FBD772
+
+  &--floating
+    background: #fff
+    box-shadow: 10px 20px 30px rgba(149, 173, 180, .18)
+  &--submit
+    color: #fff
+    height: min-content
+    width: max-content
+    border-radius: 5px
+    padding: .6rem 2rem
+    background-color: #FAC76A
+    &[disabled=disabled], &:disabled
+       background-color: #fce0ab
+
+  &--cancel, &--reset
+    color: #5D5D5D
+    padding: 0
+    width: max-width
+    border-bottom: 1px solid transparent
+    vertical-align: center
+    &:hover
+      border-bottom: 1px solid #5D5D5D
+  &--default
+    background: #fff
+    border: 1px solid #DCDFE6
+    padding: .6rem 1rem
+    border-radius: .5rem
+    &:hover
+      background: #F7F7F7
+  &--danger
+    background-color:  #F47573
+    color: #fff
+    padding: .6rem 1rem
+    border-radius: .5rem
+  &--return
+    background-color:  #fff
+    border: 1px solid #DCDFE6
+    padding: .6rem 1rem
+    border-radius: .5rem
+
+  &--code
+    margin-top: .5rem
+    margin-bottom: .5rem
+    border: none
+    background-color: #E9EDF3
+    color: #5D5D5D
+    width: 10rem
+    height: 4rem
+    border-radius: .5rem
+    cursor: pointer
+    &:disabled
+      color: #929292
+    &:disabled:hover
+      color: #929292
+    &:hover
+      color: #414141

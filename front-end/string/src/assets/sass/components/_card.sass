@@ -1,0 +1,46 @@
+.card--normal
+  background: white
+  overflow: hidden
+  box-shadow: 0 3px 50px rgba(186, 186, 186, 0.3)
+.card--rounded
+  border-radius: 10px
+.card--paperlike
+  &__container
+    position: relative
+    &::before, &::after
+      position: absolute
+      content: ''
+      height: 10px
+      width: 50%
+      z-index: -1
+      box-shadow: 0 15px 18px rgba(186, 186, 186, 1)
+      background: white
+      bottom: 3%
+    &::before
+      left: 0
+      transform: rotate(-5deg)
+    &::after
+      right: 0
+      transform: rotate(5deg)
+
+
+  &__paper
+    background: #f7f7f7
+    position: relative
+    // overflow-y: hidden
+    &::before
+      position: absolute
+      top: 5%
+      right: 0px
+      content: ''
+      height: 92%
+      width: 10px
+      z-index: -1
+      box-shadow: 10px 15px 20px rgba(186, 186, 186, 0.8)
+
+
+
+
+.card
+  &__main
+    padding: 0 8px

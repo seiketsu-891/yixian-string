@@ -1,0 +1,58 @@
+.text--quote
+  display: block
+  position: relative
+  font-size: 30px
+  padding-top: 100px
+  padding-left: 10px
+  color: #767676
+  &::before
+    position: absolute
+    content: '“'
+    color: #C9C9C9
+    font-size: 100px
+    top: 100px
+    left: -40px
+    z-index: -1
+  &::after
+    position: absolute
+    content: '”'
+    font-size: 100px
+    bottom: -50px
+    color: #C9C9C9
+.sticky-top
+  position: fixed
+  top: 0
+  z-index: 20
+.u-center-text
+  text-align: center
+.u-center-transform
+  position: absolute
+  transform: translate(50%, 50%)
+  transform: translate(-50%,-50%)
+// this may delete
+.u-border-round
+  border-radius: 20px
+.u-rounded
+  border-radius: 20px
+
+.u-hidden
+  display: none
+
+
+// -----  borders ----------
+.border--lightgrey
+ border: 1px solid #D3D3D3
+.textlinethrough
+  text-decoration: line-through
+
+.keep-spaces
+  white-space: pre-wrap
+
+.hr--dashed
+  margin: 2rem 0
+  border-top: 0
+  border-bottom: 1px dashed #DDDEDE
+.hr
+  margin: 2rem 0
+  border-top: 0
+  border-bottom: 1px solid #DDDEDE

@@ -1,0 +1,269 @@
+// lg以下时纵向排列
+@media (min-width: $bp-lg)
+  .frame
+    &__box
+      &--avatartxt
+        flex-direction: row !important
+.feature
+  padding-top: calc(var(--margin-section) *2)
+  &-frame
+    width: 100%
+    position: relative
+    height: max-content
+    &__bg
+      border-radius: 3rem
+      position: absolute
+      height: 100%
+      &--right
+        width: 85%
+        right: 0
+      &--pink
+        background: #FFF2EF
+      &--green
+        background: #DEF5F4
+      &--middle
+        width: 80%
+        left: 10%
+    &__top, &__bottom
+      margin: 2rem 0
+    &__bottom
+      margin-top: 4rem
+      margin-bottom: 2rem
+      position: relative
+      display: flex
+      width: 100%
+      &--2
+       padding-right: 20%
+       .feature-frame__connectedcards-biggercard
+        width: 100%
+       .iconwrapper
+         margin-top: 3rem
+         width: 5rem
+         height: 5rem
+         margin-left: 2rem
+      &--1
+        padding-left: 20%
+        padding-right: 10%
+        height: max-content
+        justify-content: center
+        > .svgicon
+          width: 4rem
+          margin-top: 2rem
+          height: 4rem
+          margin-right: 10%
+      &-imgwrapper
+        width: 50%
+        max-width: 16rem
+        height: max-content
+        padding: 2rem
+        background: #fff
+        border-radius: 2rem
+        > img
+          width: 100%
+          height: auto
+
+    &__connectedcards
+      position: relative
+      // margin-top: 3rem
+      display: flex
+      flex-direction: row
+      align-items: center
+      // padding-right: 3rem
+      width: 100%
+      z-index: 30
+      height: max-content
+      // 中间的白色部分
+      &__bridge
+        display: block
+        position: absolute
+        background: #fff
+        width: 5%
+        height: 100%
+        &--toright
+          left: 65%
+        &--toleft
+          right: 65%
+      // 连接部分的覆盖圆角部分
+      &::before, &::after
+        content: ''
+        position: absolute
+        background: #FFF2F0
+        z-index: 30
+        width: 5%
+        height: 43%
+        border-radius: 2rem
+      &--toright
+        &::before, &::after
+          left: 65%
+      &--toleft
+        &::before, &::after
+          right: 65%
+      &::before
+        top: 0
+      &::after
+        bottom: 0
+      > *
+        background: #fff
+        border-radius: 2rem
+      &-biggercard
+        // align-items: center
+        width: 65%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 1.5rem
+        position: relative
+        justify-content: center
+        align-items: flex-start
+        // 投影
+        &::after
+          content: ''
+          position: absolute
+          display: block
+          background: #fff
+        &--toright::after, &--toleft::after
+          top: 0
+          width: calc(10/65 * 1% * 100)
+          height: 100%
+          z-index: -1
+          box-shadow: -2rem 12rem 10rem 10rem   rgba(210, 210, 210, .15)
+        &--toright::after
+          //带阴影的部分
+          left: 0
+          border-top-left-radius : 2rem
+          border-bottom-left-radius: 2rem
+        &--toleft::after
+          right: 0
+          border-top-right-radius : 2rem
+          border-bottom-right-radius: 2rem
+
+      &-smallercard
+        margin-right: 5%
+        margin-left: auto
+        // background: pink
+        width: 25%
+        height: max-content
+        position: relative
+        &-imgwrapper
+          width: 100%
+          max-width: 11rem
+          margin: 0 auto
+          padding: .8rem
+          > *
+            width: 100%
+  &__main
+    &-wrapper
+     width: 100%
+    &-tag
+      display: block
+      width: max-content
+      padding: .8rem 1rem
+      font-size: 1.3rem
+      border-radius: 5px
+      &--red
+        color: #EB571B
+        background-color: #FFF2ED
+      &--blue
+        color: #14A9A2
+        background-color: #DDF5F4
+    &-txt, &-bulletpoints
+      margin-top: 4rem !important
+    &-txt
+      &--title
+        font-size: 20px
+        position: relative
+        margin: 2rem 0
+        &::before
+          position: absolute
+          content: ''
+          display: block
+          height: 3px
+          width: 7rem
+          left: 0
+          bottom: -1rem
+          background-color: #FFD888
+      &--desc
+        line-height: 2
+        color: #95AFBA
+    &-bulletpoints
+      > *
+        display: inline-block
+        &:not(:last-of-type)
+          margin-right: 4rem
+
+      &--prefix
+        display: inline-block
+        width: .7rem
+        height: .7rem
+        border-radius: 50%
+        vertical-align: middle
+        background: #FFD982
+
+// frame指featur部分的图片
+.frame
+  &-txt
+    // max-height: 16vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    // width: 60%
+    color: #95AFBB
+    &__title
+      color: #5D5D5D
+      font-size: 1.6rem
+
+  &-avatar
+    width: 16vw
+    height: 16vw
+    max-width: 9rem
+    max-height: 9rem
+    background: blue
+    background: #fff
+    border-radius: 1rem
+    box-shadow: 2px 2px 5px 2px #F2F5FD
+    display: flex
+    justify-content: center
+    align-items: center
+    &__wrapper
+      width: 80%
+      height: 80%
+      max-width: 8rem
+      max-height: 8rem
+      background: #FFD9CA
+      position: relative
+      border-radius: inherit
+      &--green
+        background: #90CCC9 !important
+    &__svg
+      width: 50%
+      height: 50%
+      position: absolute
+      transform: translate(-50%, -50%)
+      top: 50%
+      left: 50%
+
+.feature--1
+  .feature-frame__top
+    padding-right: 3rem
+
+.feature--2
+  .feature-frame__bottom
+    .feature-frame__connectedcards
+      // 不显示连接部分
+      &::before, &::after
+        display: none
+  .feature-frame__top
+    .feature-frame__connectedcards
+      &::before, &::after
+        background: #DEF5F4
+
+
+  .feature-frame__connectedcards
+    &-smallercard
+      width: 6rem
+      height: 6rem
+      padding: 1.5rem !important
+      border-radius: 1rem
+      .card-icon
+        height: 100%
+        width: 100%
